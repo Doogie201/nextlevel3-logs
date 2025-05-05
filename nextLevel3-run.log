@@ -1,126 +1,68 @@
-[0;34m[2025-05-05T04:19:51] [INFO] Starting script: nextLevel3.sh (v2.9)[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Verifying Xcode Command-Line Tools…[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Checking: xcode-select -p &>/dev/null[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Bootstrapping Homebrew…[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Checking: command -v brew &>/dev/null[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Checking: brew --version &>/dev/null[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Checking: [[ -d /opt/homebrew ]][0m
-[0;34m[2025-05-05T04:19:51] [INFO] Evaluating Homebrew shell environment...[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Homebrew ready.[0m
-[0;34m[2025-05-05T04:19:51] [INFO] Installing brew formulae…[0m
-[0;34m[2025-05-05T04:19:51] [INFO] ▶ brew update[0m
-==> Updating Homebrew...
-Already up-to-date.
-[0;34m[2025-05-05T04:19:54] [INFO] ▶ brew install mise colima docker docker-buildx docker-compose cloudflared jq[0m
-Warning: Treating docker as a formula. For the cask, use homebrew/cask/docker or specify the `--cask` flag. To silence this message, use the `--formula` flag.
-Warning: mise 2025.5.0 is already installed and up-to-date.
-To reinstall 2025.5.0, run:
-  brew reinstall mise
-Warning: colima 0.8.1 is already installed and up-to-date.
-To reinstall 0.8.1, run:
-  brew reinstall colima
-Warning: docker 28.1.1 is already installed and up-to-date.
-To reinstall 28.1.1, run:
-  brew reinstall docker
-Warning: docker-buildx 0.23.0 is already installed and up-to-date.
-To reinstall 0.23.0, run:
-  brew reinstall docker-buildx
-Warning: docker-compose 2.35.1 is already installed and up-to-date.
-To reinstall 2.35.1, run:
-  brew reinstall docker-compose
-Warning: cloudflared 2025.4.2 is already installed and up-to-date.
-To reinstall 2025.4.2, run:
-  brew reinstall cloudflared
-Warning: jq 1.7.1 is already installed and up-to-date.
-To reinstall 1.7.1, run:
-  brew reinstall jq
-[0;34m[2025-05-05T04:19:55] [INFO] Installing brew casks…[0m
-[0;34m[2025-05-05T04:19:55] [INFO] ▶ brew install --cask volta macs-fan-control raycast warp rectangle-pro betterdisplay hummingbird yubico-yubikey-manager yubico-authenticator knockknock blockblock nordvpn[0m
-Warning: Not upgrading volta, the latest version is already installed
-Warning: Not upgrading macs-fan-control, the latest version is already installed
-Warning: Not upgrading raycast, the latest version is already installed
-Warning: Not upgrading warp, the latest version is already installed
-Warning: Not upgrading rectangle-pro, the latest version is already installed
-Warning: Not upgrading betterdisplay, the latest version is already installed
-Warning: Not upgrading hummingbird, the latest version is already installed
-Warning: Not upgrading yubico-yubikey-manager, the latest version is already installed
-Warning: Not upgrading yubico-authenticator, the latest version is already installed
-Warning: Not upgrading knockknock, the latest version is already installed
-Warning: Not upgrading blockblock, the latest version is already installed
-Warning: Not upgrading nordvpn, the latest version is already installed
-[0;34m[2025-05-05T04:19:56] [INFO] Configuring Mise…[0m
-[0;34m[2025-05-05T04:19:56] [INFO] ▶ grep -q 'mise activate' ~/.zshrc || echo 'eval "$(mise activate zsh)"' >> ~/.zshrc[0m
-[0;34m[2025-05-05T04:19:56] [INFO] Checking: command -v mise &>/dev/null[0m
-[0;34m[2025-05-05T04:19:56] [INFO] Activating Mise in script session…[0m
-[0;34m[2025-05-05T04:19:56] [INFO] ▶ mise use -g node@lts python@3.12 rust@stable go@1.22[0m
-mise ~/.config/mise/config.toml tools: go@1.22.12, rust@stable, python@3.12.10, node@22.15.0
-[0;34m[2025-05-05T04:19:56] [INFO] Starting Colima VM…[0m
-[0;34m[2025-05-05T04:19:56] [INFO] ▶ colima start --arch aarch64 --vm-type vz --vz-rosetta || true[0m
-time="2025-05-05T04:19:57-04:00" level=warning msg="already running, ignoring"
-[0;34m[2025-05-05T04:19:57] [INFO] Adding low-power aliases…[0m
-[0;34m[2025-05-05T04:19:57] [INFO] ▶ grep -q lpm-on ~/.zshrc || echo 'alias lpm-on="sudo powermetrics -q --lowpowermode on"' >> ~/.zshrc[0m
-[0;34m[2025-05-05T04:19:57] [INFO] ▶ grep -q lpm-off ~/.zshrc || echo 'alias lpm-off="sudo powermetrics -q --lowpowermode off"' >> ~/.zshrc[0m
-[0;34m[2025-05-05T04:19:57] [INFO] Configuring macOS Firewall & TouchID for sudo…[0m
-[0;34m[2025-05-05T04:19:57] [INFO] ▶ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on[0m
-[0;34m[2025-05-05T04:20:10] [INFO] ▶ grep -qF 'auth\tsufficient\tpam_tid.so' /etc/pam.d/sudo || echo -e 'auth\tsufficient\tpam_tid.so' | sudo tee -a /etc/pam.d/sudo >/dev/null[0m
-[0;34m[2025-05-05T04:20:10] [INFO] Attempting to generate YubiKey SSH key…[0m
-[0;34m[2025-05-05T04:20:10] [INFO] Checking: ssh-keygen -t ed25519-sk -f ~/.ssh/id_ed25519_sk -N '' -O resident 2>/dev/null[0m
-[0;33m[2025-05-05T04:20:10] [WARN] No FIDO2 device found; skipping YubiKey keygen[0m
-[0;34m[2025-05-05T04:20:10] [INFO] Installing battery alert agent…[0m
-[0;34m[2025-05-05T04:20:10] [INFO] ▶ chmod +x ~/Scripts/battAlert.sh[0m
-[0;34m[2025-05-05T04:20:10] [INFO] Battery alert agent: lint, unload & bootstrap[0m
-[0;34m[2025-05-05T04:20:10] [INFO] ▶ plutil -lint /Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist[0m
-/Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist: OK
-[0;34m[2025-05-05T04:20:10] [INFO] ▶ launchctl list com.local.battalert &&     launchctl bootout gui/501 /Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist || true[0m
-{
-	"LimitLoadToSessionType" = "Aqua";
-	"Label" = "com.local.battalert";
-	"OnDemand" = true;
-	"LastExitStatus" = 19968;
-	"Program" = "$HOME/Scripts/battAlert.sh";
-	"ProgramArguments" = (
-		"$HOME/Scripts/battAlert.sh";
-	);
-};
-[0;34m[2025-05-05T04:20:10] [INFO] Bootstrapped battery alert agent ✔[0m
-[0;34m[2025-05-05T04:20:10] [INFO] Installing weekly audit agent…[0m
-[0;34m[2025-05-05T04:20:10] [INFO] ▶ chmod +x ~/Scripts/weeklyAudit.sh[0m
-[0;34m[2025-05-05T04:20:10] [INFO] Loading agent com.local.weeklyaudit…[0m
-[0;34m[2025-05-05T04:20:10] [INFO] Installing Ollama & pulling Mistral model…[0m
-[0;34m[2025-05-05T04:20:10] [INFO] ▶ brew install ollama[0m
-Warning: Treating ollama as a formula. For the cask, use homebrew/cask/ollama or specify the `--cask` flag. To silence this message, use the `--formula` flag.
-Warning: ollama 0.6.7 is already installed and up-to-date.
-To reinstall 0.6.7, run:
-  brew reinstall ollama
-[0;34m[2025-05-05T04:20:11] [INFO] ▶ brew services start ollama || true[0m
-Service `ollama` already started, use `brew services restart ollama` to restart.
-[0;34m[2025-05-05T04:20:12] [INFO] ▶ ollama pull mistral:7b || true[0m
-[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
-pulling ff82381e2bea: 100% ▕██████████████████▏ 4.1 GB                         [K
-pulling 43070e2d4e53: 100% ▕██████████████████▏  11 KB                         [K
-pulling 491dfa501e59: 100% ▕██████████████████▏  801 B                         [K
-pulling ed11eda7790d: 100% ▕██████████████████▏   30 B                         [K
-pulling 42347cd80dc8: 100% ▕██████████████████▏  485 B                         [K
-verifying sha256 digest [K
-writing manifest [K
-success [K[?25h[?2026l
-[0;34m[2025-05-05T04:20:12] [INFO] ▶ plutil -lint /Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist[0m
-/Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist: OK
-[0;34m[2025-05-05T04:20:12] [INFO] ▶ launchctl list com.local.weeklyaudit && launchctl bootout gui/501 /Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist || true[0m
-{
-	"LimitLoadToSessionType" = "Aqua";
-	"Label" = "com.local.weeklyaudit";
-	"OnDemand" = true;
-	"LastExitStatus" = 19968;
-	"Program" = "$HOME/Scripts/weeklyAudit.sh";
-	"ProgramArguments" = (
-		"$HOME/Scripts/weeklyAudit.sh";
-	);
-};
-[0;34m[2025-05-05T04:20:12] [INFO] Bootstrapped weekly audit agent ✔[0m
-[0;34m[2025-05-05T04:20:12] [INFO] Configuring passwordless sudo for networksetup…[0m
-[0;34m[2025-05-05T04:20:12] [INFO] Checking: sudo -n true 2>/dev/null[0m
-[0;34m[2025-05-05T04:20:13] [INFO] (Prompting for sudo password to cache it for this script run)[0m
-[0;34m[2025-05-05T04:20:26] [INFO] → Passwordless sudo rule already exists in /etc/sudoers.d/nextlevel-network[0m
-[0;34m[2025-05-05T04:20:26] [INFO] Detecting active network service…[0m
-./nextLevel3.sh:532: PRIMARY_SERVICE_ID: parameter not set
+[0;34m[2025-05-05T04:42:42] [INFO] Starting script: nextLevel3.sh (v2.10)[0m
+[0;34m[2025-05-05T04:42:42] [INFO] Verifying Xcode Command-Line Tools…[0m
+./nextLevel3.sh:288: command not found: check
+./nextLevel3.sh:289: command not found: run
+[0;31m[2025-05-05T04:42:42] [ERROR] Script failed in section 'Script Init' on line 289 with exit code 127[0m
+[0;34m[2025-05-05T04:42:42] [INFO] Initiating diagnostics for section 'Script Init'…[0m
+[0;34m[2025-05-05T04:42:42] [INFO] --- General System Info ---[0m
+[0;34m[2025-05-05T04:42:42] [INFO] >>> Running Diagnostic: df -h[0m
+[0;34m[2025-05-05T04:42:42] [INFO] >>> --- STDOUT ---[0m
+[0;34m[2025-05-05T04:42:42] [INFO] Filesystem                                                     Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1                                                926Gi    10Gi   178Gi     6%    425k  1.9G    0%   /
+devfs                                                         268Ki   268Ki     0Bi   100%     926     0  100%   /dev
+/dev/disk3s6                                                  926Gi   4.0Gi   178Gi     3%       4  1.9G    0%   /System/Volumes/VM
+/dev/disk3s2                                                  926Gi   6.6Gi   178Gi     4%    1.3k  1.9G    0%   /System/Volumes/Preboot
+/dev/disk3s4                                                  926Gi   6.8Mi   178Gi     1%     103  1.9G    0%   /System/Volumes/Update
+/dev/disk1s2                                                  500Mi   6.0Mi   480Mi     2%       1  4.9M    0%   /System/Volumes/xarts
+/dev/disk1s1                                                  500Mi   5.4Mi   480Mi     2%      32  4.9M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3                                                  500Mi   3.7Mi   480Mi     1%      70  4.9M    0%   /System/Volumes/Hardware
+/dev/disk3s5                                                  926Gi   726Gi   178Gi    81%    2.3M  1.9G    0%   /System/Volumes/Data
+map auto_home                                                   0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+/dev/disk7s2                                                  931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/Crucial X6
+com.apple.TimeMachine.2025-05-02-160824.backup@/dev/disk7s2   931Gi   882Gi   120Gi    89%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-02-160824.backup
+com.apple.TimeMachine.2025-03-22-105440.backup@/dev/disk7s2   931Gi   848Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-03-22-105440.backup
+com.apple.TimeMachine.2025-04-11-103542.backup@/dev/disk7s2   931Gi   851Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-11-103542.backup
+com.apple.TimeMachine.2025-03-29-014020.backup@/dev/disk7s2   931Gi   869Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-03-29-014020.backup
+com.apple.TimeMachine.2025-04-04-142253.backup@/dev/disk7s2   931Gi   835Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-04-142253.backup
+com.apple.TimeMachine.2025-04-12-083855.backup@/dev/disk7s2   931Gi   855Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-12-083855.backup
+com.apple.TimeMachine.2025-04-29-145115.backup@/dev/disk7s2   931Gi   867Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-29-145115.backup
+com.apple.TimeMachine.2025-04-06-102956.backup@/dev/disk7s2   931Gi   841Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-06-102956.backup
+com.apple.TimeMachine.2025-05-01-180058.backup@/dev/disk7s2   931Gi   874Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-01-180058.backup
+com.apple.TimeMachine.2025-04-25-142059.backup@/dev/disk7s2   931Gi   881Gi   120Gi    89%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-25-142059.backup
+com.apple.TimeMachine.2025-04-28-164514.backup@/dev/disk7s2   931Gi   864Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-28-164514.backup
+com.apple.TimeMachine.2025-05-03-143338.backup@/dev/disk7s2   931Gi   798Gi   120Gi    87%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-03-143338.backup
+com.apple.TimeMachine.2025-04-07-090701.backup@/dev/disk7s2   931Gi   843Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-07-090701.backup
+com.apple.TimeMachine.2025-04-22-092119.backup@/dev/disk7s2   931Gi   881Gi   120Gi    89%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-22-092119.backup
+com.apple.TimeMachine.2025-04-05-122549.backup@/dev/disk7s2   931Gi   839Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-05-122549.backup
+com.apple.TimeMachine.2025-04-08-073742.backup@/dev/disk7s2   931Gi   846Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-08-073742.backup
+com.apple.TimeMachine.2025-04-30-195608.backup@/dev/disk7s2   931Gi   872Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-30-195608.backup
+com.apple.TimeMachine.2025-04-10-111529.backup@/dev/disk7s2   931Gi   851Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-10-111529.backup
+com.apple.TimeMachine.2025-04-23-172435.backup@/dev/disk7s2   931Gi   878Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-23-172435.backup
+com.apple.TimeMachine.2025-04-09-065917.backup@/dev/disk7s2   931Gi   850Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-09-065917.backup
+com.apple.TimeMachine.2025-04-24-155601.backup@/dev/disk7s2   931Gi   881Gi   120Gi    89%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-24-155601.backup
+com.apple.TimeMachine.2025-04-27-183551.backup@/dev/disk7s2   931Gi   854Gi   120Gi    88%    1.9M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-04-27-183551.backup
+/Users/marcussmith/Downloads/Visual Studio Code.app           926Gi   731Gi   175Gi    81%    2.3M  1.8G    0%   /private/var/folders/qw/cf2lx3cj3pq85xb3xsw2bgb80000gn/T/AppTranslocation/495EBA47-47D5-4B61-B882-53D11D78EE89
+com.apple.TimeMachine.2025-05-04-060418.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-060418.backup
+com.apple.TimeMachine.2025-05-04-070411.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-070411.backup
+com.apple.TimeMachine.2025-05-04-080439.backup@/dev/disk7s2   931Gi   810Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-080439.backup
+com.apple.TimeMachine.2025-05-04-130627.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-130627.backup
+com.apple.TimeMachine.2025-05-04-150844.backup@/dev/disk7s2   931Gi   812Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-150844.backup
+com.apple.TimeMachine.2025-05-04-191352.backup@/dev/disk7s2   931Gi   812Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-191352.backup
+com.apple.TimeMachine.2025-05-04-201452.backup@/dev/disk7s2   931Gi   812Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-201452.backup
+com.apple.TimeMachine.2025-05-04-181303.backup@/dev/disk7s2   931Gi   812Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-181303.backup
+com.apple.TimeMachine.2025-05-04-221602.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-221602.backup
+com.apple.TimeMachine.2025-05-04-231646.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-231646.backup
+com.apple.TimeMachine.2025-05-04-110516.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-110516.backup
+com.apple.TimeMachine.2025-05-05-001713.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-05-001713.backup
+com.apple.TimeMachine.2025-05-04-160839.backup@/dev/disk7s2   931Gi   812Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-160839.backup
+com.apple.TimeMachine.2025-05-04-171037.backup@/dev/disk7s2   931Gi   812Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-171037.backup
+com.apple.TimeMachine.2025-05-04-211446.backup@/dev/disk7s2   931Gi   812Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-211446.backup
+com.apple.TimeMachine.2025-05-04-100500.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-100500.backup
+com.apple.TimeMachine.2025-05-04-140748.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-140748.backup
+com.apple.TimeMachine.2025-05-05-011729.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-05-011729.backup
+com.apple.TimeMachine.2025-05-04-120533.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-120533.backup
+com.apple.TimeMachine.2025-05-04-090454.backup@/dev/disk7s2   931Gi   811Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-090454.backup
+com.apple.TimeMachine.2025-05-04-050320.backup@/dev/disk7s2   931Gi   810Gi   120Gi    88%    2.0M  1.3G    0%   /Volumes/.timemachine/83C2B1CC-EC3A-4C14-867C-6611B7F380B0/2025-05-04-050320.backup[0m
+[0;34m[2025-05-05T04:42:42] [INFO] >>> ------------[0m
+[0;34m[2025-05-05T04:42:42] [INFO] >>> Diagnostic Exit Code: [0m
+[0;34m[2025-05-05T04:42:42] [INFO] >>> Running Diagnostic: top -l 1 | head -n 10[0m
