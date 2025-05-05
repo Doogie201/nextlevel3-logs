@@ -1,17 +1,25 @@
-[0;34m[2025-05-05T13:09:23] [INFO] Starting script: nextLevel3.sh (v2.9)[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Verifying Xcode Command-Line Tools…[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Checking: xcode-select -p &>/dev/null[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Bootstrapping Homebrew…[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Checking: command -v brew &>/dev/null[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Checking: brew --version &>/dev/null[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Checking: [[ -d /opt/homebrew ]][0m
-[0;34m[2025-05-05T13:09:23] [INFO] Evaluating Homebrew shell environment...[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Homebrew ready.[0m
-[0;34m[2025-05-05T13:09:23] [INFO] Installing brew formulae…[0m
-[0;34m[2025-05-05T13:09:23] [INFO] ▶ brew update[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Starting script: nextLevel3.sh (v2.9)[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Verifying Xcode Command-Line Tools…[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Checking: xcode-select -p &>/dev/null[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Bootstrapping Homebrew…[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Checking: command -v brew &>/dev/null[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Checking: brew --version &>/dev/null[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Checking: [[ -d /opt/homebrew ]][0m
+[0;34m[2025-05-05T13:47:15] [INFO] Evaluating Homebrew shell environment...[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Homebrew ready.[0m
+[0;34m[2025-05-05T13:47:15] [INFO] Installing brew formulae…[0m
+[0;34m[2025-05-05T13:47:15] [INFO] ▶ brew update[0m
 ==> Updating Homebrew...
-Already up-to-date.
-[0;34m[2025-05-05T13:09:26] [INFO] ▶ brew install mise colima docker docker-buildx docker-compose cloudflared jq[0m
+Updated 1 tap (homebrew/core).
+==> New Formulae
+hexd
+==> Outdated Formulae
+gettext
+
+You have 1 outdated formula installed.
+You can upgrade it with brew upgrade
+or list it with brew outdated.
+[0;34m[2025-05-05T13:47:18] [INFO] ▶ brew install mise colima docker docker-buildx docker-compose cloudflared jq[0m
 Warning: Treating docker as a formula. For the cask, use homebrew/cask/docker or specify the `--cask` flag. To silence this message, use the `--formula` flag.
 Warning: mise 2025.5.0 is already installed and up-to-date.
 To reinstall 2025.5.0, run:
@@ -34,8 +42,8 @@ To reinstall 2025.4.2, run:
 Warning: jq 1.7.1 is already installed and up-to-date.
 To reinstall 1.7.1, run:
   brew reinstall jq
-[0;34m[2025-05-05T13:09:27] [INFO] Installing brew casks…[0m
-[0;34m[2025-05-05T13:09:27] [INFO] ▶ brew install --cask volta macs-fan-control raycast warp rectangle-pro betterdisplay hummingbird yubico-yubikey-manager yubico-authenticator knockknock blockblock nordvpn[0m
+[0;34m[2025-05-05T13:47:19] [INFO] Installing brew casks…[0m
+[0;34m[2025-05-05T13:47:19] [INFO] ▶ brew install --cask volta macs-fan-control raycast warp rectangle-pro betterdisplay hummingbird yubico-yubikey-manager yubico-authenticator knockknock blockblock nordvpn[0m
 Warning: Not upgrading volta, the latest version is already installed
 Warning: Not upgrading macs-fan-control, the latest version is already installed
 Warning: Not upgrading raycast, the latest version is already installed
@@ -48,30 +56,30 @@ Warning: Not upgrading yubico-authenticator, the latest version is already insta
 Warning: Not upgrading knockknock, the latest version is already installed
 Warning: Not upgrading blockblock, the latest version is already installed
 Warning: Not upgrading nordvpn, the latest version is already installed
-[0;34m[2025-05-05T13:09:28] [INFO] Configuring Mise…[0m
-[0;34m[2025-05-05T13:09:28] [INFO] ▶ grep -q 'mise activate' ~/.zshrc || echo 'eval "$(mise activate zsh)"' >> ~/.zshrc[0m
-[0;34m[2025-05-05T13:09:28] [INFO] Checking: command -v mise &>/dev/null[0m
-[0;34m[2025-05-05T13:09:28] [INFO] Activating Mise in script session…[0m
-[0;34m[2025-05-05T13:09:28] [INFO] ▶ mise use -g node@lts python@3.12 rust@stable go@1.22[0m
+[0;34m[2025-05-05T13:47:20] [INFO] Configuring Mise…[0m
+[0;34m[2025-05-05T13:47:20] [INFO] ▶ grep -q 'mise activate' ~/.zshrc || echo 'eval "$(mise activate zsh)"' >> ~/.zshrc[0m
+[0;34m[2025-05-05T13:47:20] [INFO] Checking: command -v mise &>/dev/null[0m
+[0;34m[2025-05-05T13:47:20] [INFO] Activating Mise in script session…[0m
+[0;34m[2025-05-05T13:47:20] [INFO] ▶ mise use -g node@lts python@3.12 rust@stable go@1.22[0m
 mise ~/.config/mise/config.toml tools: go@1.22.12, rust@stable, python@3.12.10, node@22.15.0
-[0;34m[2025-05-05T13:09:28] [INFO] Starting Colima VM…[0m
-[0;34m[2025-05-05T13:09:28] [INFO] ▶ colima start --arch aarch64 --vm-type vz --vz-rosetta || true[0m
-time="2025-05-05T13:09:29-04:00" level=warning msg="already running, ignoring"
-[0;34m[2025-05-05T13:09:29] [INFO] Adding low-power aliases…[0m
-[0;34m[2025-05-05T13:09:29] [INFO] ▶ grep -q lpm-on ~/.zshrc || echo 'alias lpm-on="sudo powermetrics -q --lowpowermode on"' >> ~/.zshrc[0m
-[0;34m[2025-05-05T13:09:29] [INFO] ▶ grep -q lpm-off ~/.zshrc || echo 'alias lpm-off="sudo powermetrics -q --lowpowermode off"' >> ~/.zshrc[0m
-[0;34m[2025-05-05T13:09:29] [INFO] Configuring macOS Firewall & TouchID for sudo…[0m
-[0;34m[2025-05-05T13:09:29] [INFO] ▶ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on[0m
-[0;34m[2025-05-05T13:09:45] [INFO] ▶ grep -qF 'auth\tsufficient\tpam_tid.so' /etc/pam.d/sudo || echo -e 'auth\tsufficient\tpam_tid.so' | sudo tee -a /etc/pam.d/sudo >/dev/null[0m
-[0;34m[2025-05-05T13:09:45] [INFO] Attempting to generate YubiKey SSH key…[0m
-[0;34m[2025-05-05T13:09:45] [INFO] Checking: ssh-keygen -t ed25519-sk -f ~/.ssh/id_ed25519_sk -N '' -O resident 2>/dev/null[0m
-[0;33m[2025-05-05T13:09:45] [WARN] No FIDO2 device found; skipping YubiKey keygen[0m
-[0;34m[2025-05-05T13:09:45] [INFO] Installing battery alert agent…[0m
-[0;34m[2025-05-05T13:09:45] [INFO] ▶ chmod +x ~/Scripts/battAlert.sh[0m
-[0;34m[2025-05-05T13:09:45] [INFO] Battery alert agent: lint, unload & bootstrap[0m
-[0;34m[2025-05-05T13:09:45] [INFO] ▶ plutil -lint /Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist[0m
+[0;34m[2025-05-05T13:47:20] [INFO] Starting Colima VM…[0m
+[0;34m[2025-05-05T13:47:20] [INFO] ▶ colima start --arch aarch64 --vm-type vz --vz-rosetta || true[0m
+time="2025-05-05T13:47:21-04:00" level=warning msg="already running, ignoring"
+[0;34m[2025-05-05T13:47:21] [INFO] Adding low-power aliases…[0m
+[0;34m[2025-05-05T13:47:21] [INFO] ▶ grep -q lpm-on ~/.zshrc || echo 'alias lpm-on="sudo powermetrics -q --lowpowermode on"' >> ~/.zshrc[0m
+[0;34m[2025-05-05T13:47:21] [INFO] ▶ grep -q lpm-off ~/.zshrc || echo 'alias lpm-off="sudo powermetrics -q --lowpowermode off"' >> ~/.zshrc[0m
+[0;34m[2025-05-05T13:47:21] [INFO] Configuring macOS Firewall & TouchID for sudo…[0m
+[0;34m[2025-05-05T13:47:21] [INFO] ▶ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on[0m
+[0;34m[2025-05-05T13:47:31] [INFO] ▶ grep -qF 'auth\tsufficient\tpam_tid.so' /etc/pam.d/sudo || echo -e 'auth\tsufficient\tpam_tid.so' | sudo tee -a /etc/pam.d/sudo >/dev/null[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Attempting to generate YubiKey SSH key…[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Checking: ssh-keygen -t ed25519-sk -f ~/.ssh/id_ed25519_sk -N '' -O resident 2>/dev/null[0m
+[0;33m[2025-05-05T13:47:31] [WARN] No FIDO2 device found; skipping YubiKey keygen[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Installing battery alert agent…[0m
+[0;34m[2025-05-05T13:47:31] [INFO] ▶ chmod +x ~/Scripts/battAlert.sh[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Battery alert agent: lint, unload & bootstrap[0m
+[0;34m[2025-05-05T13:47:31] [INFO] ▶ plutil -lint /Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist[0m
 /Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist: OK
-[0;34m[2025-05-05T13:09:45] [INFO] ▶ launchctl list com.local.battalert &&     launchctl bootout gui/501 /Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist || true[0m
+[0;34m[2025-05-05T13:47:31] [INFO] ▶ launchctl list com.local.battalert &&     launchctl bootout gui/501 /Users/marcussmith/Library/LaunchAgents/com.local.battAlert.plist || true[0m
 {
 	"LimitLoadToSessionType" = "Aqua";
 	"Label" = "com.local.battalert";
@@ -82,20 +90,20 @@ time="2025-05-05T13:09:29-04:00" level=warning msg="already running, ignoring"
 		"$HOME/Scripts/battAlert.sh";
 	);
 };
-[0;34m[2025-05-05T13:09:45] [INFO] Bootstrapped battery alert agent ✔[0m
-[0;34m[2025-05-05T13:09:45] [INFO] Installing weekly audit agent…[0m
-[0;34m[2025-05-05T13:09:45] [INFO] ▶ chmod +x ~/Scripts/weeklyAudit.sh[0m
-[0;34m[2025-05-05T13:09:45] [INFO] Loading agent com.local.weeklyaudit…[0m
-[0;34m[2025-05-05T13:09:45] [INFO] Installing Ollama & pulling Mistral model…[0m
-[0;34m[2025-05-05T13:09:45] [INFO] ▶ brew install ollama[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Bootstrapped battery alert agent ✔[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Installing weekly audit agent…[0m
+[0;34m[2025-05-05T13:47:31] [INFO] ▶ chmod +x ~/Scripts/weeklyAudit.sh[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Loading agent com.local.weeklyaudit…[0m
+[0;34m[2025-05-05T13:47:31] [INFO] Installing Ollama & pulling Mistral model…[0m
+[0;34m[2025-05-05T13:47:31] [INFO] ▶ brew install ollama[0m
 Warning: Treating ollama as a formula. For the cask, use homebrew/cask/ollama or specify the `--cask` flag. To silence this message, use the `--formula` flag.
 Warning: ollama 0.6.7 is already installed and up-to-date.
 To reinstall 0.6.7, run:
   brew reinstall ollama
-[0;34m[2025-05-05T13:09:46] [INFO] ▶ brew services start ollama || true[0m
+[0;34m[2025-05-05T13:47:32] [INFO] ▶ brew services start ollama || true[0m
 Service `ollama` already started, use `brew services restart ollama` to restart.
-[0;34m[2025-05-05T13:09:47] [INFO] ▶ ollama pull mistral:7b || true[0m
-[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+[0;34m[2025-05-05T13:47:33] [INFO] ▶ ollama pull mistral:7b || true[0m
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
 pulling ff82381e2bea: 100% ▕██████████████████▏ 4.1 GB                         [K
 pulling 43070e2d4e53: 100% ▕██████████████████▏  11 KB                         [K
 pulling 491dfa501e59: 100% ▕██████████████████▏  801 B                         [K
@@ -104,9 +112,9 @@ pulling 42347cd80dc8: 100% ▕████████████████�
 verifying sha256 digest [K
 writing manifest [K
 success [K[?25h[?2026l
-[0;34m[2025-05-05T13:09:47] [INFO] ▶ plutil -lint /Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist[0m
+[0;34m[2025-05-05T13:47:34] [INFO] ▶ plutil -lint /Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist[0m
 /Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist: OK
-[0;34m[2025-05-05T13:09:47] [INFO] ▶ launchctl list com.local.weeklyaudit && launchctl bootout gui/501 /Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist || true[0m
+[0;34m[2025-05-05T13:47:34] [INFO] ▶ launchctl list com.local.weeklyaudit && launchctl bootout gui/501 /Users/marcussmith/Library/LaunchAgents/com.local.weeklyaudit.plist || true[0m
 {
 	"LimitLoadToSessionType" = "Aqua";
 	"Label" = "com.local.weeklyaudit";
@@ -117,40 +125,64 @@ success [K[?25h[?2026l
 		"$HOME/Scripts/weeklyAudit.sh";
 	);
 };
-[0;34m[2025-05-05T13:09:47] [INFO] Bootstrapped weekly audit agent ✔[0m
-[0;34m[2025-05-05T13:09:47] [INFO] Configuring passwordless sudo for networksetup…[0m
-[0;34m[2025-05-05T13:09:47] [INFO] Checking: sudo -n true 2>/dev/null[0m
-[0;34m[2025-05-05T13:09:47] [INFO] (Prompting for sudo password to cache it for this script run)[0m
-[0;34m[2025-05-05T13:10:01] [INFO] → Passwordless sudo rule already exists in /etc/sudoers.d/nextlevel-network[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Detecting active network service...[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Default network interface: 'en0'[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Active service for interface 'en0' is 'Wi-Fi'[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Active service: 'Wi-Fi'[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Attempting to get Colima VM IP via 'colima status --json'...[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Raw 'colima status --json' output:[0m
-[0;34m[2025-05-05T13:10:01] [INFO] {"display_name":"colima","driver":"macOS Virtualization.Framework","arch":"aarch64","runtime":"docker","mount_type":"virtiofs","ip_address":"192.168.64.2","docker_socket":"unix:///Users/marcussmith/.colima/default/docker.sock","kubernetes":false,"cpu":2,"memory":2147483648,"disk":107374182400}[0m
-[0;34m[2025-05-05T13:10:01] [INFO] '.address' key did not yield IP. Trying '.Network.address'...[0m
-[0;34m[2025-05-05T13:10:01] [INFO] '.Network.address' key did not yield IP. Trying '.network.address' (lowercase)...[0m
-[0;34m[2025-05-05T13:10:01] [INFO] '.network.address' key did not yield IP. Trying '.ipAddress' (legacy?)...[0m
-[0;31m[2025-05-05T13:10:01] [ERROR] Could not extract Colima VM IP address from the JSON output above. Please examine the JSON and update the jq query in the script if necessary. Skipping Pi-hole/DoH setup.[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Skipping Pi-hole and DoH deployment due to earlier checks.[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Launching NordVPN GUI…[0m
-[0;34m[2025-05-05T13:10:01] [INFO] ▶ open -a NordVPN || true[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Pruning Logitech agents…[0m
-[0;34m[2025-05-05T13:10:01] [INFO] ----- Health Check -----[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Checking: sysctl -n sysctl.proc_translated &>/dev/null[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Checking: curl -s --max-time 5 http://localhost:11434/v1/models &>/dev/null[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Checking: curl -s --max-time 5 http://localhost:11434/v1/models 2>/dev/null | grep -q mistral[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Checking: scutil --dns &>/dev/null[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Checking: scutil --dns &>/dev/null[0m
-[0;34m[2025-05-05T13:10:01] [INFO] Checking: launchctl list com.local.battalert &>/dev/null[0m
-[0;34m[2025-05-05T13:10:02] [INFO] Checking: launchctl list com.local.weeklyaudit &>/dev/null[0m
-[0;34m[2025-05-05T13:10:02] [INFO] Checking: launchctl list com.local.doh &>/dev/null[0m
-[0;34m[2025-05-05T13:10:02] [INFO] ----- Health Check Summary -----[0m
-[0;34m[2025-05-05T13:10:02] [INFO] ARM-only process ✔[0m
-[0;34m[2025-05-05T13:10:02] [INFO] Ollama Mistral running ✔[0m
-[0;34m[2025-05-05T13:10:02] [INFO] DNS not local ❌[0m
-[0;34m[2025-05-05T13:10:02] [INFO] Agent com.local.battalert loaded ✔[0m
-[0;34m[2025-05-05T13:10:02] [INFO] Agent com.local.weeklyaudit loaded ✔[0m
-[0;34m[2025-05-05T13:10:02] [INFO] --------------------------[0m
-[0;34m[2025-05-05T13:10:02] [INFO] Setup complete ✔[0m
+[0;34m[2025-05-05T13:47:34] [INFO] Bootstrapped weekly audit agent ✔[0m
+[0;34m[2025-05-05T13:47:34] [INFO] Configuring passwordless sudo for networksetup…[0m
+[0;34m[2025-05-05T13:47:34] [INFO] Checking: sudo -n true 2>/dev/null[0m
+[0;34m[2025-05-05T13:47:34] [INFO] (Prompting for sudo password to cache it for this script run)[0m
+[0;34m[2025-05-05T13:47:45] [INFO] → Passwordless sudo rule already exists in /etc/sudoers.d/nextlevel-network[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Detecting active network service...[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Default network interface: 'en0'[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Active service for interface 'en0' is 'Wi-Fi'[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Active service: 'Wi-Fi'[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Attempting to get Colima VM IP via 'colima status --json'...[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Raw 'colima status --json' output:[0m
+[0;34m[2025-05-05T13:47:45] [INFO] {"display_name":"colima","driver":"macOS Virtualization.Framework","arch":"aarch64","runtime":"docker","mount_type":"virtiofs","ip_address":"192.168.64.2","docker_socket":"unix:///Users/marcussmith/.colima/default/docker.sock","kubernetes":false,"cpu":2,"memory":2147483648,"disk":107374182400}[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Key '.network.address' did not yield an IP; trying next…[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Key '.Network.address' did not yield an IP; trying next…[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Extracted Colima VM IP using key '.ip_address': 192.168.64.2[0m
+[0;34m[2025-05-05T13:47:45] [INFO] Colima VM IP successfully extracted: 192.168.64.2[0m
+[0;34m[2025-05-05T13:47:45] [INFO] ▶ sleep 3[0m
+[0;34m[2025-05-05T13:47:48] [INFO] Proceeding with DNS setup.[0m
+[0;34m[2025-05-05T13:47:48] [INFO] Deploying Cloudflared DoH on 192.168.64.2:5053…[0m
+[0;34m[2025-05-05T13:47:48] [INFO] Using cloudflared binary at: /opt/homebrew/bin/cloudflared[0m
+[0;34m[2025-05-05T13:47:48] [INFO] DoH agent: lint, unload & bootstrap[0m
+[0;34m[2025-05-05T13:47:48] [INFO] ▶ plutil -lint /Users/marcussmith/Library/LaunchAgents/com.local.doh.plist[0m
+/Users/marcussmith/Library/LaunchAgents/com.local.doh.plist: OK
+[0;34m[2025-05-05T13:47:48] [INFO] ▶ launchctl list com.local.doh && launchctl bootout gui/501 /Users/marcussmith/Library/LaunchAgents/com.local.doh.plist || true[0m
+Could not find service "com.local.doh" in domain for port
+[0;34m[2025-05-05T13:47:48] [INFO] Bootstrapped DoH agent ✔[0m
+[0;34m[2025-05-05T13:47:48] [INFO] Deploying Pi-hole container…[0m
+[0;34m[2025-05-05T13:47:48] [INFO] ▶ docker rm -f pihole || true[0m
+pihole
+[0;34m[2025-05-05T13:47:48] [INFO] Running docker container 'pihole' binding to 192.168.64.2:53 and 127.0.0.1:80[0m
+[0;34m[2025-05-05T13:47:48] [INFO] ▶ docker run -d --name pihole     -p 192.168.64.2:53:53/tcp -p 192.168.64.2:53:53/udp     -p 127.0.0.1:80:80     --restart unless-stopped     -v pihole_data:/etc/pihole     -e TZ=EDT     -e WEBPASSWORD='set_me'     -e DNS1=192.168.64.2#5053     pihole/pihole:latest[0m
+85e920cbe559b1250d4452910f550fd7af055f0452bf26c241b153c2720b4c68
+[0;34m[2025-05-05T13:47:49] [INFO] ✓ Pi-hole bound to 192.168.64.2:53 with DoH upstream[0m
+[0;34m[2025-05-05T13:47:49] [INFO] Please VERIFY Pi-hole setup and CHANGE DEFAULT PASSWORD:[0m
+[0;34m[2025-05-05T13:47:49] [INFO] 1. Access Pi-hole web UI at http://127.0.0.1/admin[0m
+[0;34m[2025-05-05T13:47:49] [INFO] 2. Log in (default password is 'set_me', CHANGE THIS IMMEDIATELY!)[0m
+[0;34m[2025-05-05T13:47:49] [INFO] 3. Go to Settings -> DNS. Verify 'Custom 1 (IPv4)' is 192.168.64.2#5053 and checked.[0m
+[0;34m[2025-05-05T13:47:49] [INFO] Updating macOS DNS to Pi-hole at 192.168.64.2 for service 'Wi-Fi'…[0m
+[0;34m[2025-05-05T13:47:49] [INFO] ▶ sudo networksetup -setdnsservers "Wi-Fi" 192.168.64.2[0m
+[0;34m[2025-05-05T13:47:49] [INFO] ▶ dscacheutil -flushcache && sudo killall -HUP mDNSResponder || true[0m
+[0;34m[2025-05-05T13:48:01] [INFO] ✓ macOS DNS set to Pi-hole (192.168.64.2) and caches flushed.[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Launching NordVPN GUI…[0m
+[0;34m[2025-05-05T13:48:01] [INFO] ▶ open -a NordVPN || true[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Pruning Logitech agents…[0m
+[0;34m[2025-05-05T13:48:01] [INFO] ----- Health Check -----[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Checking: sysctl -n sysctl.proc_translated &>/dev/null[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Checking: curl -s --max-time 5 http://localhost:11434/v1/models &>/dev/null[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Checking: curl -s --max-time 5 http://localhost:11434/v1/models 2>/dev/null | grep -q mistral[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Checking: scutil --dns &>/dev/null[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Checking: launchctl list com.local.battalert &>/dev/null[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Checking: launchctl list com.local.weeklyaudit &>/dev/null[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Checking: launchctl list com.local.doh &>/dev/null[0m
+[0;34m[2025-05-05T13:48:01] [INFO] ----- Health Check Summary -----[0m
+[0;34m[2025-05-05T13:48:01] [INFO] ARM-only process ✔[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Ollama Mistral running ✔[0m
+[0;34m[2025-05-05T13:48:01] [INFO] DNS pointing to Pi-hole (192.168.64.2) ✔[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Agent com.local.battalert loaded ✔[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Agent com.local.weeklyaudit loaded ✔[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Agent com.local.doh loaded (192.168.64.2:5053) ✔[0m
+[0;34m[2025-05-05T13:48:01] [INFO] --------------------------[0m
+[0;34m[2025-05-05T13:48:01] [INFO] Setup complete ✔[0m
